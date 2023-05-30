@@ -1,0 +1,36 @@
+# Mac
+.DS_Store
+**/.DS_Store
+
+# vim/vi
+*.swp
+
+# JavaScript
+node_modules/
+node_modules/**/.babelrc
+node_modules/**/.eslintignore
+node_modules/**/.flowconfig
+node_modules/**/.eslintrc
+node_modules/**/README.md
+node_modules/**/.editorconfig
+
+.eslintcache
+unpackage/dist/build/
+unpackage/dist/dev/
+
+# python
+*.pyc
+
+# todo.md
+docs/todo.md
+docs/test.js
+
+*.zip
+oauth.source.js
+mix.source.js
+
+src/message.json
+package-lock.json
+
+main_bulitln.js
+tar.sh

@@ -1,0 +1,248 @@
+{
+    "id": "Ask-chatGPT",
+    "name": "Ask-ChatGPT",
+    "description": "ChatGPT人工智能，支持写代码、解释代码、修复Bug、生成测试用例、对话聊天、图像生成，开箱即用无需任何配置，免代理免key",
+    "displayName": "Ask ChatGPT 人工智能",
+    "version": "1.9.0",
+    "publisher": "oneone",
+    "engines": {
+        "HBuilderX": "^3.0.0"
+    },
+    "categories": [
+        "Other"
+    ],
+    "main": "./src/extension.js",
+    "activationEvents": [
+        "onCommand:askChatGPT.main",
+        "onCommand:askChatGPT.coding",
+        "onCommand:askChatGPT.explainCode",
+        "onCommand:askChatGPT.fixBug",
+        "onCommand:askChatGPT.GenerateTestCases",
+        "onCommand:askChatGPT.GenerateTestCasesUsingJest",
+        "onCommand:askChatGPT.prompts",
+        "onCommand:askChatGPT.setting",
+        "onCommand:askChatGPT.openActions",
+        "onCommand:askChatGPT.createActions",
+        "onCommand:askChatGPT.imagesGenerations",
+        "onCommand:askChatGPT.tokenizer",
+        "onCommand:askChatGPT.help",
+        "onCommand:askChatGPT.feedback",
+        "onView:AskChatGPTView"
+    ],
+    "contributes": {
+        "viewsContainers": {
+            "activitybar": [
+                {
+                    "id": "AskChatGPTView",
+                    "title": "ChatGPT",
+                    "icon": {
+                        "Default": "static/chatgpt.svg",
+                        "Monokai": "static/chatgpt.svg",
+                        "Atom One Dark": "static/chatgpt.svg"
+                    }
+                }
+            ]
+        },
+        "views": {
+            "AskChatGPTView": [
+                {
+                    "id": "AskChatGPTView",
+                    "title": "ChatGPT"
+                }
+            ]
+        },
+        "commands": [
+            {
+                "command": "askChatGPT.main",
+                "title": "Ask ChatGPT(&A)"
+            },
+            {
+                "command": "askChatGPT.coding",
+                "title": "Coding ChatGPT(&C)"
+            },
+            {
+                "command": "askChatGPT.explainCode",
+                "title": "解释代码(&E)"
+            },
+            {
+                "command": "askChatGPT.fixBug",
+                "title": "查找并修复Bug(&F)"
+            },
+            {
+                "command": "askChatGPT.GenerateTestCases",
+                "title": "生成测试用例(&G)"
+            },
+            {
+                "command": "askChatGPT.GenerateTestCasesUsingJest",
+                "title": "使用Jest生成测试用例(&J)"
+            },
+            {
+                "command": "askChatGPT.prompts",
+                "title": "Prompt - 提示词列表(&P)"
+            },
+            {
+                "command": "askChatGPT.setting",
+                "title": "ChatGPT - 设置(&S)"
+            },
+            {
+                "command": "askChatGPT.openActions",
+                "title": "打开Actions(&O)"
+            },
+            {
+                "command": "askChatGPT.createActions",
+                "title": "新建Actions(&N)"
+            },
+            {
+                "command": "askChatGPT.imagesGenerations",
+                "title": "AI图像生成(&I)"
+            },
+            {
+                "command": "askChatGPT.tokenizer",
+                "title": "token计算工具"
+            },
+            {
+                "command": "askChatGPT.feedback",
+                "title": "问题反馈"
+            },
+            {
+                "command": "askChatGPT.help",
+                "title": "查看帮助文档(&H)"
+            }
+        ],
+        "keybindings": [
+            {
+                "command": "askChatGPT.main",
+                "key": "Ctrl + Shift + C",
+                "macosx": "command+Shift+C"
+            },
+            {
+                "command": "askChatGPT.coding",
+                "key": "Ctrl + L",
+                "macosx": "command + L"
+            }
+        ],
+        "menus": {
+            "menubar/tool": [
+                {
+                    "group": "ext_settings"
+                },
+                {
+                    "title": "Ask ChatGPT(&C)",
+                    "group": "ext_settings",
+                    "id": "askChatGPT"
+                },
+                {
+                    "command": "askChatGPT.main",
+                    "group": "askChatGPT@1"
+                },
+                {
+                    "command": "askChatGPT.prompts",
+                    "group": "askChatGPT@1"
+                },
+                {
+                    "group": "askChatGPT@1"
+                },
+                {
+                    "command": "askChatGPT.coding",
+                    "group": "askChatGPT@2"
+                },
+                {
+                    "group": "askChatGPT@2"
+                },
+                {
+                    "command": "askChatGPT.openActions",
+                    "group": "askChatGPT@3"
+                },
+                {
+                    "command": "askChatGPT.createActions",
+                    "group": "askChatGPT@3"
+                },
+                {
+                    "group": "askChatGPT@3"
+                },
+                {
+                    "command": "askChatGPT.imagesGenerations",
+                    "group": "askChatGPT@4"
+                },
+                {
+                    "group": "askChatGPT@4"
+                },
+                {
+                    "command": "askChatGPT.setting",
+                    "group": "askChatGPT@5"
+                },
+                {
+                    "group": "askChatGPT@5"
+                },
+                {
+                    "command": "askChatGPT.feedback",
+                    "group": "askChatGPT@7"
+                },
+                {
+                    "command": "askChatGPT.help",
+                    "group": "askChatGPT@7"
+                }
+            ],
+            "editor/context": [
+                {
+                    "command": "askChatGPT.main",
+                    "group": "copy",
+                    "when": "editorTextFocus"
+                },
+                {
+                    "title": "ChatGPT Actions(&C)",
+                    "group": "copy",
+                    "when": "editorTextFocus",
+                    "id": "askChatGPT"
+                },
+                {
+                    "command": "askChatGPT.coding",
+                    "title": "Coding",
+                    "group": "askChatGPT@1"
+                },
+                {
+                    "command": "askChatGPT.explainCode",
+                    "title": "解释代码",
+                    "group": "askChatGPT@2"
+                },
+                {
+                    "command": "askChatGPT.fixBug",
+                    "title": "查找并修复Bug",
+                    "group": "askChatGPT@3"
+                },
+                {
+                    "group": "askChatGPT@3"
+                },
+                {
+                    "command": "askChatGPT.GenerateTestCases",
+                    "title": "生成测试用例",
+                    "group": "askChatGPT@4"
+                },
+                {
+                    "command": "askChatGPT.GenerateTestCasesUsingJest",
+                    "title": "使用Jest生成测试用例",
+                    "group": "askChatGPT@4"
+                },
+                {
+                    "group": "askChatGPT@9"
+                },
+                {
+                    "command": "askChatGPT.openActions",
+                    "title": "更多操作",
+                    "group": "askChatGPT@9"
+                },
+                {
+                    "group": "copy"
+                }
+            ]
+        }
+    },
+    "extensionDependencies": [
+        "plugin-manager"
+    ],
+    "dependencies": {
+        "axios": "^1.3.5",
+        "gpt-tokens": "^1.0.6",
+        "marked": "^4.3.0"
+    }
+}

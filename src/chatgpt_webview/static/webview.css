@@ -1,0 +1,358 @@
+body {
+    color: var(--fontColor);
+    background-color: var(--background);
+    font-size: 0.92rem;
+}
+
+body::-webkit-scrollbar {
+    display: none;
+}
+
+[v-cloak] {
+    display: none;
+}
+
+label,
+input,
+button {
+    font-size: 0.9rem !important;
+}
+
+.pl18 {
+    padding-left: 18px;
+}
+
+.h30 {
+    height: 30px;
+}
+
+#page-top {
+    background-color: var(--background) !important;
+    z-index: 999;
+    line-height: 50px;
+    height: 50px;;
+}
+
+@media screen and (max-width: 150px) {
+    #page-top {
+        display: none;
+    }
+}
+
+
+#refresh-progress {
+    width: 20px;
+    height: 2px;
+    background: var(--inputLineColor);
+    position: absolute;
+    animation-name: pulse;
+    animation-duration: 5s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-play-state: running;
+    -webkit-animation-name: pulse;
+    -webkit-animation-duration: 5s;
+    -webkit-animation-timing-function: linear;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-direction: alternate;
+    -webkit-animation-play-state: running;
+}
+
+@-webkit-keyframes pulse {
+    0% {
+        background: var(--inputLineColor);
+        left: 0px;
+        top: 0px;
+    }
+
+    50% {
+        background: var(--inputLineColor);
+        left: 50%;
+        top: 0px;
+    }
+
+    100% {
+        background: var(--inputLineColor);
+        left: 100%;
+        top: 0px;
+    }
+}
+
+.project-name {
+    width: 150px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.outline-none {
+    box-shadow: none !important;
+}
+
+.form-control-bg {
+    background-color: var(--inputBgColor) !important;
+}
+
+.form-control {
+    border-radius: 7px !important;
+    font-size: 0.8rem !important;
+    border: 1px solid var(--background);
+    height: 7rem !important;
+    max-height: 7rem !important;
+}
+
+.form-control:focus {
+    border-radius: 7px !important;
+    border: 1px solid var(--inputLineColor) !important;
+}
+
+.form-group .form-control::-webkit-input-placeholder {
+    font-size: 0.9rem !important;
+    font-weight: 200 !important;
+    color: #c0c4cc !important;
+}
+
+/* .form-control 文本框隐藏滚动条 */
+.form-control::-webkit-scrollbar {
+    display: none;
+}
+
+.top {
+    font-size: 1rem;
+    color: var(--fontColor);
+    font-weight: 700;
+}
+
+.icon:active {
+    -webkit-transform: rotate(0.9);
+    transform: scale(0.9);
+}
+
+.ci {
+    font-size: 0.8rem;
+    margin-top: 3px;
+}
+
+.hideicon {
+    overflow: hidden;
+    opacity: 0;
+    transition: all 0.3s;
+    /*transform: translateY(100%);*/
+}
+
+
+.fixedBottom {
+    position: fixed;
+    bottom: 0px;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 8rem;
+    font-size: 0.9rem;
+    color: var(--fontColor) !important;
+    background-color: var(--background) !important;
+    z-index: 1000;
+}
+
+.cursor-default {
+    cursor: default;
+}
+
+input[type=radio]:checked,
+input[type=checkbox]:checked {
+    background-color: var(--inputLineColor) !important;
+    border-color: var(--inputLineColor) !important;
+}
+
+.copy_msg {
+    display: none;
+}
+
+.box_assistant {
+    display: inline;
+}
+
+.box_assistant:hover .copy_msg {
+    display: inline-block;
+    color: #c0c4cc;
+    font-size: 12px;
+    margin-left: 12px;
+}
+
+.copy_msg:hover {
+    color: #29B494 !important;
+}
+
+.chat_assistant {
+    max-width: 95%;
+    margin-right: 5%;
+    float: left;
+    display: inline-block;
+}
+
+.chat_user {
+    max-width: 95%;
+    margin-left: 5%;
+    float: right;
+    display: inline-block;
+}
+
+.chat_content {
+    border-radius: 5px;
+    border: 1px solid #c0c4cc;
+    font-size: 13px;
+    padding: 8px;
+    max-width: 90%;
+    word-wrap:break-word;
+    display: inline-block;
+}
+
+.chat_content_user {
+    border-radius: 5px;
+    border: 1px solid #c0c4cc;
+    font-size: 13px;
+    padding: 8px;
+    max-width: 90%;
+    word-wrap:break-word;
+    margin-left: 10%;
+    display: inline-block;
+    text-align: initial;
+}
+
+
+.chatgpt_icon {
+    height: 18px;
+    width: 18px;
+}
+
+.chat_msg_time {
+    color: #c0c4cc;
+    font-size: 12px;
+}
+
+p {
+    margin-bottom: 0 !important;
+}
+
+pre {
+  /* white-space: nowrap !important; */
+  overflow-x: auto !important;   /* 开启横向滚动条 */
+  background-color: var(--inputBgColor) !important;
+}
+
+pre::-webkit-scrollbar {
+  display:none;  /* 隐藏滚动条 */
+}
+
+ul,ol {
+    padding-left: 20px;
+}
+
+/* 
+  动画--------------------------
+*/
+.spinner {
+    /* margin: 30% auto; */
+    width: 50px;
+    /* height: 10px; */
+    text-align: center;
+    font-size: 10px;
+}
+
+.spinner>div {
+    background-color: #ea4aaa;
+    height: 4px;
+    width: 4px;
+    border-radius: 50%;
+    display: inline-block;
+    -webkit-animation: stretchdelay 1.2s infinite ease-in-out;
+    animation: stretchdelay 1.2s infinite ease-in-out;
+}
+
+.spinner .rect2 {
+    -webkit-animation-delay: -1.1s;
+    animation-delay: -1.1s;
+    background-color: #0366d6;
+}
+
+.spinner .rect3 {
+    -webkit-animation-delay: -1.0s;
+    animation-delay: -1.0s;
+    background-color: #28a745;
+}
+
+.spinner .rect4 {
+    -webkit-animation-delay: -0.9s;
+    animation-delay: -0.9s;
+    background-color: #ffd33d;
+}
+
+.spinner .rect5 {
+    -webkit-animation-delay: -0.8s;
+    animation-delay: -0.8s;
+    background-color: #f66a0a;
+}
+
+@-webkit-keyframes stretchdelay {
+    0%,40%,100% {-webkit-transform: scaleY(0.4);}
+    20% {-webkit-transform: scaleY(1.0);}
+}
+
+@keyframes stretchdelay {
+    0%,40%,100% {transform: scaleY(0.6);-webkit-transform: scaleY(0.6);}
+    20% {transform: scaleY(1.0);-webkit-transform: scaleY(1.0);}
+}
+
+.input_action {
+    position: absolute;
+    text-align: center;
+    margin-top: -30px;
+    right: 30px;
+    background-color: var(--inputBgColor);
+}
+
+.input_action > img {
+    height: 20px;
+    width: 20px;
+}
+
+img:active {
+    -webkit-transform: rotate(0.9);
+    transform: scale(0.9);
+}
+
+img:hover {
+    -webkit-transform: rotate(0.9);
+    transform: scale(0.9);
+}
+
+.top_action span {
+    margin: 0 2px;
+}
+
+.top_title {
+
+}
+
+/* 当屏幕宽度小于250时，.top_title不显示 */
+@media screen and (max-width: 250px) {
+    .top_title {
+        max-width: 100px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+}
+
+/* 当屏幕宽度小于250时，.top_title不显示 */
+@media screen and (max-width: 200px) {
+    .top_title {
+        display: none;
+    }
+}
+
+/* code和pre */
+code, pre {
+    color: var(--codeColor) !important;
+}

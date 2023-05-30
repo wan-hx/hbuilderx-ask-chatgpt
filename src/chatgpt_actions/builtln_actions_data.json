@@ -1,0 +1,66 @@
+[
+    {
+        "id": "explainCode",
+        "label": "解释代码",
+        "description": "Explain the above code in a concise way.",
+        "chat_action": "用简洁的方式解释下下面的代码。\n\n${selected}\n",
+        "hx_action": "console"
+    },
+    {
+        "id": "fixBug",
+        "label": "查找并修复源代码中的错误",
+        "description": "Find and fix bugs in source code.",
+        "chat_action": "Find and fix bugs in source code.\n\n${selected}.\n",
+        "hx_action": "console"
+    },
+    {
+        "id": "GenerateTestCases",
+        "label": "生成测试用例",
+        "description": "create test case.",
+        "chat_action": "Generate test cases.\n\n${selected}.\n",
+        "hx_action": "console"
+    },
+    {
+        "id": "GenerateTestCasesUsingJest",
+        "label": "使用jest生成测试用例",
+        "description": "create test case using jest.",
+        "chat_action": "Generate complete test cases using jest.\n\n${selected}.\n",
+        "hx_action": "console"
+    },
+    {
+        "label": "修正英文拼写错误",
+        "description": "",
+        "chat_action": "${selected}. Fix the spelling mistakes.",
+        "hx_action": "replace"
+    },
+    {
+        "label": "翻译为英文",
+        "description": "translate,fy",
+        "chat_action": "Translate this into English: ${selected}",
+        "hx_action": "replace"
+    },
+    {
+        "label": "翻译为繁体中文",
+        "description": "translate,fy",
+        "chat_action": "Translate this into traditional Chinese: ${selected}",
+        "hx_action": "replace"
+    },
+    {
+        "label": "翻译为简体中文",
+        "description": "translate,fy",
+        "chat_action": "Translate this into Simplified Chinese: ${selected}",
+        "hx_action": "replace"
+    },
+    {
+        "label": "翻译为日语",
+        "description": "translate,fy",
+        "chat_action": "Translate this into Japanese: ${selected}",
+        "hx_action": "replace"
+    },
+    {
+        "label": "翻译为法语",
+        "description": "translate,fy",
+        "chat_action": "Translate this into French: ${selected}",
+        "hx_action": "replace"
+    }
+]
