@@ -3,7 +3,7 @@
     "name": "Ask-ChatGPT",
     "description": "ChatGPT人工智能，支持写代码、解释代码、修复Bug、生成测试用例、对话聊天、图像生成，开箱即用无需任何配置，免代理免key",
     "displayName": "Ask ChatGPT 人工智能",
-    "version": "1.9.0",
+    "version": "1.9.1",
     "publisher": "oneone",
     "engines": {
         "HBuilderX": "^3.0.0"
